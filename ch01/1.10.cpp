@@ -1,19 +1,20 @@
 /*************************************************************************
-	> File Name: my-ext-20.cpp
+	> File Name: 1.10.cpp
 	> Author: 
 	> Mail: 
-	> Created Time: 2016年06月01日 星期三 15时30分23秒
+	> Created Time: 2016年10月29日 星期六 20时29分52秒
  ************************************************************************/
 
 #include<iostream>
-#include"../include/Sales_item.h"
 using namespace std;
 int main()
 {
-    Sales_item item;
-    while(std::cin>>item)
+    int val = 10;
+    while(val>=0)
     {
-        std::cout<<item<<std::endl; 
+
+        std::cout<<val<<std::endl;
+
+        val--;
     }
-    return 0;
 }

@@ -1,20 +1,20 @@
 /*************************************************************************
-	> File Name: ext-9.cpp
+	> File Name: 1.9.cpp
 	> Author: 
 	> Mail: 
-	> Created Time: 2016年06月01日 星期三 14时27分55秒
+	> Created Time: 2016年10月29日 星期六 20时20分48秒
  ************************************************************************/
 
 #include<iostream>
+using namespace std;
 int main()
 {
-    int sum = 0, val = 50;
+    int sum=0,val = 50;
     while(val<=100)
     {
-        sum += val;
-        val++;
+        sum+=val;
+        ++val;
     }
-    std::cout << "Sum of 50 to 100 is"
-              << sum << std::endl;
+    std::cout<<sum<<std::endl;
     return 0;
 }
