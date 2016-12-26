@@ -4,6 +4,8 @@
 #include<iostream>
 using namespace std;
 struct Person{
+  Person()=default;
+  Person(const std::string s1,const std::string s2):name(s1),address(s2){}
   std::string name;
   std::string address;
   std::string get_name() const {return this->name;}

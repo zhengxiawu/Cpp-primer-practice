@@ -4,6 +4,12 @@
 #include<iostream>
 using namespace std;
 struct Sales_data{
+  friend std::istream& operator >> (std::istream&,Sales_data&);
+  Sales_data()=default;
+  Sales_data(const std::string &s):bookNo(s){};
+  Sales_data(const std::string &s, unsigned n,double p):
+    bookNo(s),units_sold(n),revenue(p*n){};
+  Sales_data(std::istream &is){is>>*this;};
   std::string isbn() const {return this->bookNo;}
   Sales_data& combine(const Sales_data&);
   double avg_price() const;
@@ -39,5 +45,12 @@ double Sales_data::avg_price() const{
   }else{
     return 0;
   }
+}
+std::istream& operator>>(std::istream& in, Sales_data& s)
+{
+  double p;
+  in >> s.bookNo >> s.units_sold>>p;
+  s.revenue = s.units_sold*p;
+  return in;
 }
 #endif
